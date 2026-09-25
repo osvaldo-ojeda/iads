@@ -1,0 +1,10 @@
+{
+  "id": "TELA-001",
+  "descripcion_semantica": "Denim pesado de 12 oz, 100% algodón rígido con teñido índigo intenso. Presenta un tacto rústico, alta resistencia al roce y cuerpo firme...",
+  "metadatos": {
+    "linea_textil": "indumentaria",
+    "sucursal_disponible": "central_buenos_aires",
+    "en_stock": true,
+    "tags_regionales": ["jean", "vaquero", "mezclilla"]
+  }
+}
