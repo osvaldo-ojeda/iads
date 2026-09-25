@@ -18,7 +18,7 @@
 
 ---
 
-## Criterio 1 — Herramientas diseñadas (A.1, A.2) · 20 puntos
+## Criterio 1 — Herramientas diseñadas (A.1, A.2) · 2.0 puntos (20%)
 
 ### ¿Qué evaluar?
 
@@ -51,7 +51,7 @@ Si las 4 preguntas tienen respuesta clara → docstring de calidad.
 
 ---
 
-## Criterio 2 — Test de elección de herramientas (A.3) · 10 puntos
+## Criterio 2 — Test de elección de herramientas (A.3) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -73,7 +73,7 @@ Que el grupo efectivamente probó que el LLM elige la herramienta correcta para 
 
 ---
 
-## Criterio 3 — Agente ReAct con LangGraph (B.1, B.2) · 20 puntos
+## Criterio 3 — Agente ReAct con LangGraph (B.1, B.2) · 2.0 puntos (20%)
 
 ### ¿Qué evaluar?
 
@@ -115,7 +115,7 @@ Que el grafo LangGraph esté correctamente construido y que las 4 consultas obli
 
 ---
 
-## Criterio 4 — Análisis del ciclo ReAct (B.3) · 10 puntos
+## Criterio 4 — Análisis del ciclo ReAct (B.3) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -141,7 +141,7 @@ Que el grupo comprenda el flujo de razonamiento del agente y no solo que "funcio
 
 ---
 
-## Criterio 5 — Memoria persistente (C.1) · 20 puntos
+## Criterio 5 — Memoria persistente (C.1) · 2.0 puntos (20%)
 
 ### ¿Qué evaluar?
 
@@ -177,7 +177,7 @@ Si solo la "recuerda" porque está en la misma sesión de Python → no es memor
 
 ---
 
-## Criterio 6 — Arquitectura multiagente (C.2) · 15 puntos
+## Criterio 6 — Arquitectura multiagente (C.2) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -205,7 +205,7 @@ Si el routing está implementado con `if "legal" in consulta.lower()` → no es 
 
 ---
 
-## Criterio 7 — Comparación RAGAS (C.3) · 5 puntos
+## Criterio 7 — Comparación RAGAS (C.3) · 0.5 puntos (5%)
 
 ### ¿Qué evaluar?
 
@@ -226,7 +226,7 @@ Que el grupo corrió RAGAS sobre el agente (no solo sobre el RAG solo) y que doc
 
 | Situación | Penalización |
 |---|---|
-| API key real en algún commit | −15 puntos + aviso |
+| API key real en algún commit | −1.5 puntos + aviso |
 | El agente siempre usa todas las herramientas independientemente de la consulta | Criterio 3 no supera "En desarrollo" |
 | La "memoria" funciona solo dentro de un mismo invoke | Criterio 5 baja un nivel |
 | El routing es if/else sobre palabras clave | Criterio 6 baja un nivel |

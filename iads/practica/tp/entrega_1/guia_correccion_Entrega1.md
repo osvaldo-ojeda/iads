@@ -25,9 +25,9 @@ cat .gitignore | grep -E "^\.env$"
 
 | Resultado | Acción |
 |---|---|
-| Hay una key en algún commit (aunque esté borrada) | **−15**. Avisar al grupo por privado que rote la key **hoy**. |
-| `.env` aparece en `git log` | Cuenta como key filtrada si tiene valor real; si está vacío, **−5**. |
-| `.gitignore` no ignora `.env` | **−5** |
+| Hay una key en algún commit (aunque esté borrada) | **−1.5**. Avisar al grupo por privado que rote la key **hoy**. |
+| `.env` aparece en `git log` | Cuenta como key filtrada si tiene valor real; si está vacío, **−0.5**. |
+| `.gitignore` no ignora `.env` | **−0.5** |
 
 ---
 

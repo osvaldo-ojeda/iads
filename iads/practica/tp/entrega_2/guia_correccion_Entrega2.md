@@ -26,10 +26,10 @@ git ls-files | grep -E "\.index$|\.sqlite3$|chroma/|chroma\.sqlite"
 
 | Resultado | Acción |
 |---|---|
-| Key en algún commit (aunque esté borrada) | **−15**. Avisar por privado que rote la key **hoy**. |
-| `.env` en `git log` con valor real | Cuenta como key filtrada. Si está vacío, **−5**. |
-| `.gitignore` no ignora `.env` | **−5** |
-| `*.index`, `chroma.sqlite3` o el directorio persistente commiteados | **−5**. La base se reconstruye desde `base_conocimiento.json` + scripts. |
+| Key en algún commit (aunque esté borrada) | **−1.5**. Avisar por privado que rote la key **hoy**. |
+| `.env` en `git log` con valor real | Cuenta como key filtrada. Si está vacío, **−0.5**. |
+| `.gitignore` no ignora `.env` | **−0.5** |
+| `*.index`, `chroma.sqlite3` o el directorio persistente commiteados | **−0.5**. La base se reconstruye desde `base_conocimiento.json` + scripts. |
 | Repo privado (se pidió público) | Pedir que lo pasen a público o den acceso. No penaliza si responden al aviso. |
 | `.env.example` no existe o le faltan variables que los scripts usan | Bloquea la Fase 1. Pedir que lo completen — si es lo único que falta, no penaliza; si además el script no corre, criterio 4/5 baja. |
 

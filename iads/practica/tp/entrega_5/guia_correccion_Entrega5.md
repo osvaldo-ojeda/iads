@@ -18,7 +18,7 @@
 
 ---
 
-## Criterio 1 — API FastAPI funcional (A.1) · 15 puntos
+## Criterio 1 — API FastAPI funcional (A.1) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -69,7 +69,7 @@ curl http://localhost:8000/estado/corrector_001
 
 ---
 
-## Criterio 2 — Docker (A.2, A.3) · 10 puntos
+## Criterio 2 — Docker (A.2, A.3) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -106,13 +106,13 @@ curl http://localhost:8000/health
 
 ### Señales de alerta
 
-- Las API keys están hardcodeadas en el Dockerfile o docker-compose.yml → penalización de seguridad SEPARADA (−15 puntos)
+- Las API keys están hardcodeadas en el Dockerfile o docker-compose.yml → penalización de seguridad SEPARADA (−1.5 puntos)
 - El Dockerfile no tiene `CMD` o tiene `CMD python api.py` en lugar de `CMD uvicorn` → la app no arranca como servidor HTTP correctamente
 - Los volumes no están configurados → la BD SQLite se pierde al reiniciar el contenedor
 
 ---
 
-## Criterio 3 — Logs estructurados (B.1) · 10 puntos
+## Criterio 3 — Logs estructurados (B.1) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -143,7 +143,7 @@ docker-compose logs [nombre-api] | python3 -c "import sys, json; [json.loads(l) 
 
 ---
 
-## Criterio 4 — Métricas y alertas (B.2, B.3) · 10 puntos
+## Criterio 4 — Métricas y alertas (B.2, B.3) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -183,7 +183,7 @@ curl http://localhost:8000/alertas
 
 ---
 
-## Criterio 5 — LangSmith en producción (B.4) · 5 puntos
+## Criterio 5 — LangSmith en producción (B.4) · 0.5 puntos (5%)
 
 ### ¿Qué evaluar?
 
@@ -211,7 +211,7 @@ El grupo tiene que mostrar el screenshot en el informe (y puede volver a mostrar
 
 ---
 
-## Criterio 6 — Guardrails de input y output (C.1, C.2) · 15 puntos
+## Criterio 6 — Guardrails de input y output (C.1, C.2) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -254,7 +254,7 @@ for input_atacante in inputs_atacantes:
 
 ---
 
-## Criterio 7 — Security test suite (C.3, C.4) · 10 puntos
+## Criterio 7 — Security test suite (C.3, C.4) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -281,7 +281,7 @@ Los tests fallados no penalizan — si los tests pasan siempre es porque son tri
 
 ---
 
-## Criterio 8 — AIOps: versionado, experimentos, drift y ficha técnica (D.1–D.4) · 15 puntos
+## Criterio 8 — AIOps: versionado, experimentos, drift y ficha técnica (D.1–D.4) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -306,7 +306,7 @@ Cuatro cosas distintas, todas de Clase 14: que versionaron el prompt principal (
 
 ---
 
-## Criterio 9 — Demo en la Defensa — Clase 16 (E.2) · 10 puntos
+## Criterio 9 — Demo en la Defensa — Clase 16 (E.2) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -356,9 +356,9 @@ La capacidad del grupo de demostrar el sistema completo en vivo y de responder p
 
 | Situación | Penalización |
 |---|---|
-| API key real en cualquier commit del repositorio (en cualquier entrega) | −15 puntos del total + aviso urgente |
+| API key real en cualquier commit del repositorio (en cualquier entrega) | −1.5 puntos del total + aviso urgente |
 | El sistema no levanta con `docker-compose up` en el entorno del corrector | Criterios 1 y 2 no superan "En desarrollo" |
-| Falta el `.env.example` | −5 puntos del total |
+| Falta el `.env.example` | −0.5 puntos del total |
 | El grupo no puede identificar quién implementó qué parte del sistema | El docente puede pedir justificación individual |
 
 ---

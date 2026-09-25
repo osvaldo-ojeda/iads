@@ -18,7 +18,7 @@
 
 ---
 
-## Criterio 1 — Pipeline RAG con guardrails (A.2, A.3) · 20 puntos
+## Criterio 1 — Pipeline RAG con guardrails (A.2, A.3) · 2.0 puntos (20%)
 
 ### ¿Qué evaluar?
 
@@ -41,7 +41,7 @@ Que el chain LCEL funcione de punta a punta y que el prompt tenga al menos 4 de 
 
 ---
 
-## Criterio 2 — Trazabilidad de fuentes (A.4) · 10 puntos
+## Criterio 2 — Trazabilidad de fuentes (A.4) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -58,7 +58,7 @@ Que el grupo pueda mostrar explícitamente qué documentos usó el sistema para 
 
 ---
 
-## Criterio 3 — Falla del RAG básico identificada y explicada (B.1) · 15 puntos
+## Criterio 3 — Falla del RAG básico identificada y explicada (B.1) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -83,7 +83,7 @@ Que la falla sea real y reproducible (no inventada), y que la explicación técn
 
 ---
 
-## Criterio 4 — RAG avanzado implementado (B.2, B.3) · 15 puntos
+## Criterio 4 — RAG avanzado implementado (B.2, B.3) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -106,7 +106,7 @@ Chunking con solapamiento aplicado sobre su propio corpus; reranking implementan
 
 ---
 
-## Criterio 5 — Dataset de evaluación (C.1) · 15 puntos
+## Criterio 5 — Dataset de evaluación (C.1) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -139,7 +139,7 @@ Que el dataset tenga ≥10 preguntas con la distribución correcta y que las `gr
 
 ---
 
-## Criterio 6 — RAGAS corriendo + comparación (C.2, C.3) · 15 puntos
+## Criterio 6 — RAGAS corriendo + comparación (C.2, C.3) · 1.5 puntos (15%)
 
 ### ¿Qué evaluar?
 
@@ -162,7 +162,7 @@ Que las 4 métricas de RAGAS estén documentadas y que la comparación RAG bási
 
 ---
 
-## Criterio 7 — Diagnóstico y acción (C.4) · 10 puntos
+## Criterio 7 — Diagnóstico y acción (C.4) · 1.0 punto (10%)
 
 ### ¿Qué evaluar?
 
@@ -192,7 +192,7 @@ Que la métrica más baja esté correctamente diagnosticada y que la acción pro
 
 | Situación | Penalización |
 |---|---|
-| API key real en algún commit del historial de Git | −15 puntos + aviso inmediato al grupo para rotar |
+| API key real en algún commit del historial de Git | −1.5 puntos + aviso inmediato al grupo para rotar |
 | El pipeline no conecta con la base de la Entrega 2 | Criterio 1 baja automáticamente a **En desarrollo** |
 | Dataset con preguntas triviales sin distribución requerida | Criterio 5 baja un nivel |
 | Comparación RAG básico vs avanzado con valores idénticos | Criterio 6 no supera **En desarrollo** |

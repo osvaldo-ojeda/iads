@@ -32,7 +32,7 @@ E5: ¿Cómo funciona en producción? → FastAPI + Docker + observabilidad + seg
 
 Un único repositorio Git **público** por grupo (GitHub/GitLab). Se entrega solo el link, sin gestión de accesos. Como es público, **ninguna clave ni API key entra al repo** — `.env` en `.gitignore` desde el primer commit, solo se sube `.env.example` sin valores. Cada entrega agrega archivos y commits al mismo repo — el historial incremental es parte de la evaluación.
 
-**Penalización automática:** API key real detectada en cualquier commit de cualquier entrega → −15 puntos de esa entrega + aviso inmediato al grupo para rotar la clave.
+**Penalización automática:** API key real detectada en cualquier commit de cualquier entrega → −1.5 puntos de esa entrega + aviso inmediato al grupo para rotar la clave.
 
 ## Material de clase
 
