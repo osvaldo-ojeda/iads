@@ -87,6 +87,8 @@ Respondé como lo haría el sistema.
 | **Valor** | Con 40 a 60 solicitudes por semana y unos 25 minutos cada una, administración dedica **entre 17 y 25 horas semanales** a cargar solicitudes, el equivalente a una persona trabajando media jornada solo en esa tarea. Si el sistema extrae y valida los datos, el trabajo humano baja a **unos 5 minutos de revisión por solicitud** (4 a 5 horas por semana). El distribuidor pasa de esperar 2 o 3 días a **tener respuesta en el día**. También bajan los errores de tipeo al cargar CUIT y montos. |
 | **Factibilidad** | No hay que inventar tecnología. Los LLM actuales extraen datos de texto libre a JSON (structured outputs) y leen capturas y PDFs (modelos multimodales). El CUIT se valida con un algoritmo conocido, el del dígito verificador. Las reglas de calificación se programan con código común. |
 | **Disponibilidad de datos** | Hay datos reales, aunque desordenados: el historial de mensajes de WhatsApp y mail con solicitudes anteriores (sirve como set de prueba), la **normativa comercial interna** en un documento escrito ([ortelana_normativa_comercial.md](ortelana_normativa_comercial.md)) y la base de distribuidores del sistema de gestión. |
+
+> *Nota de la cátedra:* la normativa de Ortelana es **material de apoyo del caso, no un entregable**. En la Entrega 1 alcanza con **identificar** cuál es la fuente de verdad de su caso (qué documento o base de datos le faltó al modelo en la A.2). El documento en sí se arma en la Clase 5, como corpus para el RAG.
 | **Riesgo** | **Error crítico:** aprobar cuenta corriente a 60 días a un distribuidor que no califica. Eso puede terminar en deuda incobrable, una pérdida directa de dinero. **Error tolerable:** rechazar o demorar a uno que sí califica, porque se corrige con una revisión humana, aunque se puede perder la venta. **Mitigación:** el sistema **nunca aprueba solo**. Prepara el legajo validado con una recomendación y el Jefe de Administración aprueba con un clic (regla NOR-APROB). El riesgo queda **moderado y controlado**. |
 
 ### A.4 — Mapa inicial del sistema (seis piezas)
@@ -174,6 +176,8 @@ Respondé como lo haría el sistema.
 | "¿El flete a Córdoba lo pagan ustedes?" | `CONSULTA_NORMATIVA` | **En el MVP:** respuesta fija que deriva al área comercial. **Desde la Clase 5:** respuesta con RAG sobre la normativa, citando la regla (NOR-ZONA). | **BAJO** | **Solo lee** y no compromete nada. El riesgo es informar mal una condición; en el MVP se evita con la derivación, y con RAG, citando la regla. |
 | "Necesito 200 remeras talle L para el viernes." | `FUERA_DE_ALCANCE` | Respuesta fija con el canal de ventas y derivación al área comercial. No se procesa el pedido. | **BAJO** | No lee ni escribe nada del onboarding. El único costo es que el cliente tenga que escribir a otro canal. |
 
+> **¿Por qué no aparecen `CONSULTA_STOCK` ni `RECLAMO_CALIDAD`, como en la matriz de la clase?** La matriz de la Clase 2 mapeaba **toda Ortelana**, para mostrar la herramienta con riesgos distintos. Este MVP se acota a **un subsistema, el onboarding**, así que la matriz solo tiene las intenciones de ese proceso. El stock y los reclamos no desaparecen: pasan a `FUERA_DE_ALCANCE`, se derivan a otra área y quedan para versiones futuras. Acotar así es parte del diseño del MVP (B.3).
+>
 > **Criterio aplicado:** el riesgo es ALTO cuando la operación **escribe** y tiene **consecuencia financiera**, MEDIO cuando escribe sin impacto financiero directo, y BAJO cuando **solo lee** o deriva. En todas las filas, el LLM solo clasifica la intención y extrae datos: **la acción la ejecuta el código y la autoridad es la base de datos.**
 
 ### B.5 — Hipótesis más riesgosa
@@ -188,6 +192,6 @@ Respondé como lo haría el sistema.
 
 | Entrega | Qué se suma a este diseño |
 |---|---|
-| **Entrega 2** (Clase 3) | Los pasos 2, 4 y 5 del journey se convierten en código: prompt de extracción versionado, llamada a la API del modelo, contrato JSON validado y validación del CUIT. |
-| **Entrega 3** (Clases 4 a 6) | El journey completo como workflow encadenado; la [normativa](ortelana_normativa_comercial.md) como base de conocimiento (RAG) para `CONSULTA_NORMATIVA`; un agente que elige la acción según la intención. |
+| **Entrega 2** (Clase 3) | Los pasos 2, 4 y 5 del journey se convierten en código: prompt de extracción versionado, llamada a la API del modelo, contrato JSON validado y regla del dígito verificador del CUIT. |
+| **Entrega 3** (Clases 4 a 6) | El journey completo como workflow encadenado, con el resto de las reglas de negocio en código (documentación, categoría, plazo); la [normativa](ortelana_normativa_comercial.md) como base de conocimiento (RAG) para `CONSULTA_NORMATIVA`; un agente que elige la acción según la intención. |
 | **Entrega 4** (Clase 7) | Integración punta a punta, guardrails (por ejemplo, para el caso "VIP Oro") y evaluación con el set de 30 casos. |

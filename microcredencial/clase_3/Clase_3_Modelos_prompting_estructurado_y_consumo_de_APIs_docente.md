@@ -27,11 +27,12 @@
 
 Orden sugerido:
 
-1. Mostrar en vivo un zero-shot simple funcionando (10 min).
-2. Romperlo con un input ambiguo — reconectar con el laboratorio de la Clase 2 ("Modas del Sur") (5 min).
-3. Mostrar cómo few-shot lo arregla, agregando 2 ejemplos (10 min).
-4. Las 4 reglas del JSON confiable — escribirlas en el pizarrón mientras se explican, dejarlas visibles el resto de la clase (15 min).
-5. Mencionar Pydantic como profundización opcional, sin dar la clase completa de validación — 1 frase basta: "si querés blindarlo más, este es el nombre a buscar."
+0. Proyectar el contrato de Ortelana v1 y mostrar de dónde sale cada parte: las intenciones de la Matriz de la Entrega 1 y los campos del paso 2 del journey (5 min). Frase ancla: "el prompt no se inventa, se deriva del diseño".
+1. Mostrar en vivo un zero-shot simple funcionando (8 min).
+2. Romperlo con un input ambiguo, por ejemplo "¿Tienen stock de denim?" (debería dar `FUERA_DE_ALCANCE`) — reconectar con el laboratorio de la Clase 2 (5 min).
+3. Mostrar cómo few-shot lo arregla, agregando 2 o 3 ejemplos (8 min).
+4. Las 4 reglas del JSON confiable — escribirlas en el pizarrón mientras se explican, dejarlas visibles el resto de la clase (9 min).
+5. Validación en dos niveles: `json.loads()` ("¿es JSON?") y Pydantic ("¿cumple el contrato?") (10 min). Mostrar el modelo `ExtraccionOrtelana` y romperlo en vivo con `"intencion": "VIP_ORO"` y con un CUIT sin guiones. Usar solo lo básico de Pydantic: `BaseModel`, tipos, `Optional`, `Literal` y `Field(pattern=..., ge=...)`. Cerrar con la diferencia entre contrato y regla de negocio: el formato del CUIT lo valida Pydantic, el dígito verificador lo valida la regla de la Clase 2, que hoy se aplica después de Pydantic.
 
 **No profundizar** en Chain-of-Thought como técnica separada — se puede nombrar en una oración si surge la pregunta, pero no es contenido evaluable de esta microcredencial.
 
@@ -41,7 +42,7 @@ Orden sugerido:
 
 - Diagrama simple en el pizarrón: caja "tu código" ↔ caja "API del modelo", con flechas request/response.
 - Demostración en vivo de `.env` + `load_dotenv()` — mostrar la API key en el archivo y remarcar el `.gitignore`.
-- Ejemplo rápido de manejo de errores con `try/except` sobre `json.loads()`.
+- Ejemplo de manejo de errores con los tres `except` separados: comunicación, formato (`json.JSONDecodeError`) y contrato (`ValidationError`). Preguntar al grupo qué haría en cada caso antes de mostrarlo: reintentar, ajustar el prompt o revisar la extracción.
 
 **Punto de seguridad no negociable:** remarcar en voz alta que ninguna API key debe aparecer hardcodeada en ningún notebook o script que se entregue.
 
@@ -50,7 +51,10 @@ Orden sugerido:
 ## Bloque 4 — Laboratorio (50 min)
 
 - Dar 30 minutos para que cada grupo arme su script contra la API elegida (o Postman si prefieren no programar todavía).
-- Correr el test de estrés con los 3 mensajes del teórico — pedir que cada grupo comparta cuántas fallas tuvo.
+- Correr el test de estrés con los 3 mensajes del teórico — pedir que cada grupo comparta cuántas fallas tuvo y si fallaron en `json.loads()` o en Pydantic.
+- Cerrar el test con la pregunta del CUIT `20-34556789-2`: pasa Pydantic pero lo frena la regla. Remarcar que hacen falta las dos capas.
+- Pedir que corran el caso de manipulación 3 o 4 veces: con Gemini 2.5 Flash, la intención cambia entre corridas (`ALTA_DISTRIBUIDOR` o `FUERA_DE_ALCANCE`) aun con temperatura 0. Es el gancho para el prompt v2 y para la Clase 4: Pydantic no puede detectar una intención equivocada pero válida.
+- **Cada alumno con su propia API key.** La capa gratuita de Gemini devuelve 429 después de unas decenas de pedidos; si comparten una key, el laboratorio se traba. Pedir que creen la key en AI Studio antes de la clase.
 - Últimos 10 minutos: puesta en común de qué técnica (zero-shot/few-shot) usó cada grupo y por qué.
 
 **Si el grupo tiene bajo dominio técnico:** ofrecer un notebook base con el script ya armado y que solo completen el prompt y el mensaje de prueba — la evaluación es sobre el diseño del prompt y el contrato, no sobre escribir el cliente de la API desde cero.

@@ -19,7 +19,7 @@ git log --oneline
 
 | Resultado | Acción |
 |---|---|
-| Un único commit "entrega final" | **−5**. Anotar para feedback. |
+| Un único commit "entrega final" | **−0.5**. Anotar para feedback. |
 | Historial con varios commits | Continuar. |
 
 ---
@@ -101,4 +101,4 @@ Priorizar en el feedback:
 | La respuesta del modelo está parafraseada, no pegada | No hicieron el taller de verdad, o lo resumieron para que parezca mejor. Pedir la evidencia real. |
 | La Matriz tiene solo intenciones de lectura | No pensaron el caso de escritura (el que justifica el patrón híbrido). Señalar que falta una de riesgo ALTO. |
 | El criterio de éxito del MVP es "que funcione bien" | No entendieron qué es un criterio medible. Dar un ejemplo del dominio en el feedback. |
-| Un único commit con todo | No hay evidencia de proceso. Anotar −5 y anticipar que en la Entrega 2 se sigue evaluando el historial. |
+| Un único commit con todo | No hay evidencia de proceso. Anotar −0.5 y anticipar que en la Entrega 2 se sigue evaluando el historial. |
