@@ -59,28 +59,28 @@ clase_3/
 
 **¿Por qué separado así?** Cada archivo responde una sola pregunta, y cada uno cambia por motivos distintos:
 
-| Si quiero... | Toco... |
-|---|---|
-| Mejorar cómo extrae el modelo | `prompts/` (y creo una versión nueva, no piso la anterior) |
-| Agregar un campo o una intención | `contrato.py` **y** el prompt (tienen que coincidir) |
-| Cambiar de proveedor de LLM | Solo el `.env` |
-| Agregar una regla de negocio | `reglas.py` |
-| Probar un caso nuevo | `datos/lote_prueba.json` |
+| Si quiero...                      | Toco...                                                       |
+| --------------------------------- | ------------------------------------------------------------- |
+| Mejorar cómo extrae el modelo    | `prompts/` (y creo una versión nueva, no piso la anterior) |
+| Agregar un campo o una intención | `contrato.py` **y** el prompt (tienen que coincidir)  |
+| Cambiar de proveedor de LLM       | Solo el `.env`                                              |
+| Agregar una regla de negocio      | `reglas.py`                                                 |
+| Probar un caso nuevo              | `datos/lote_prueba.json`                                    |
 
 ## Qué evoluciona respecto de la Clase 2
 
 La [práctica de la Clase 2](../clase_2/clase_2_practica.py) ya tenía la idea central: el LLM extrae, Pydantic valida el contrato y una regla verifica el CUIT. La Clase 3 la convierte en un prototipo operativo:
 
-| | Clase 2 | Clase 3 |
-|---|---|---|
-| **Intenciones** | No clasificaba intenciones | Las 5 de la Matriz de la Entrega 1 |
-| **Prompt** | Dentro del código | Archivo versionado aparte, few-shot |
-| **Mensaje del distribuidor** | Pegado dentro del prompt | Separado como mensaje de usuario, delimitado con `<mensaje>` |
-| **Errores** | Contrato y regla separados, pero comunicación y formato en un mismo error | Cuatro etapas por separado: comunicación, formato, contrato y regla |
-| **Saturación de la API** | Fallaba | Reintenta ante 503 y 429 |
-| **Casos de prueba** | 3, dentro del código | 4 en un archivo de datos, con el formato de la Entrega 2 |
-| **Pruebas automáticas** | No tenía | 16 pruebas sin API |
-| **Estructura** | Un solo archivo | Un módulo por responsabilidad |
+|                                    | Clase 2                                                                    | Clase 3                                                              |
+| ---------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Intenciones**              | No clasificaba intenciones                                                 | Las 5 de la Matriz de la Entrega 1                                   |
+| **Prompt**                   | Dentro del código                                                         | Archivo versionado aparte, few-shot                                  |
+| **Mensaje del distribuidor** | Pegado dentro del prompt                                                   | Separado como mensaje de usuario, delimitado con `<mensaje>`       |
+| **Errores**                  | Contrato y regla separados, pero comunicación y formato en un mismo error | Cuatro etapas por separado: comunicación, formato, contrato y regla |
+| **Saturación de la API**    | Fallaba                                                                    | Reintenta ante 503 y 429                                             |
+| **Casos de prueba**          | 3, dentro del código                                                      | 4 en un archivo de datos, con el formato de la Entrega 2             |
+| **Pruebas automáticas**     | No tenía                                                                  | 16 pruebas sin API                                                   |
+| **Estructura**               | Un solo archivo                                                            | Un módulo por responsabilidad                                       |
 
 ## Qué viene en la Clase 4
 
