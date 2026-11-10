@@ -17,7 +17,7 @@ git log --all -p | grep -nE "sk-[A-Za-z0-9_-]{20,}|sk-ant-|AIza[A-Za-z0-9_-]{20,
 
 | Resultado | Acción |
 |---|---|
-| API key en algún commit | **−15**. Avisar para rotar. |
+| API key en algún commit | **−1.5**. Avisar para rotar. |
 
 ---
 

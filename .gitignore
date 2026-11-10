@@ -6,3 +6,6 @@ IADS3-REPO/
 .env.local
 .env.*.local
 !.env.example
+# Python
+__pycache__/
+.pytest_cache/

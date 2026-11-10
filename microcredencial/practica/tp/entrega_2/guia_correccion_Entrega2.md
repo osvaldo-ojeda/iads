@@ -25,9 +25,9 @@ cat .gitignore | grep -E "^\.env$"
 
 | Resultado | Acción |
 |---|---|
-| Hay una key en algún commit (aunque esté borrada) | **−15**. Avisar al grupo por privado que rote la key **hoy**. |
-| `.env` aparece en `git log` | Cuenta como key filtrada si tiene valor real; si está vacío, **−5**. |
-| `.gitignore` no ignora `.env` | **−5** |
+| Hay una key en algún commit (aunque esté borrada) | **−1.5**. Avisar al grupo por privado que rote la key **hoy**. |
+| `.env` aparece en `git log` | Cuenta como key filtrada si tiene valor real; si está vacío, **−0.5**. |
+| `.gitignore` no ignora `.env` | **−0.5** |
 
 ---
 
@@ -64,6 +64,21 @@ Este es el chequeo más importante de esta entrega: ¿el prototipo es coherente 
 - **A.1 — Técnica:** ¿la justificación explica *por qué* esa técnica funciona para el dominio, o solo dice "elegimos few-shot"?
 - **C.1 — Tabla:** ¿están los 4 inputs incluyendo el ambiguo y el de manipulación? ¿Están documentados los casos que fallaron?
 - **C.2 — Reflexión:** ¿dice algo concreto sobre qué mejorarían, o es genérico ("el prompt funciona bien")?
+
+---
+
+## Fase 3b — Diferencial para "Destacado": Pydantic (~2 min)
+
+La consigna publicada dice que Pydantic **no es obligatorio**: con `json.loads()` y manejo de errores se cumple el requisito, y **nadie pierde puntos por no usarlo**. Como en la clase y en el ejemplo de Ortelana sí se usa, es el diferencial principal entre "Logrado" y "Destacado" en dos criterios:
+
+| Criterio | Logrado (lo que exige la consigna) | Destacado (con Pydantic) |
+|---|---|---|
+| **1. Prompt estructurado** | Schema en el prompt, intenciones idénticas a la Matriz E1, fallback `null`, técnica justificada. | Además, el contrato está definido en código con un modelo Pydantic (intenciones como `Literal`, tipos, `Optional`) y **coincide campo por campo** con el schema del prompt. |
+| **3. Manejo de errores** | Dos `except` distintos: `json.JSONDecodeError` y falla de red. | Además, un tercer `except ValidationError` que distingue "no es JSON" de "es JSON pero no cumple el contrato", con mensajes distintos. |
+
+**Cómo verificarlo rápido:** pasarle al script un input que lleve al modelo a devolver una intención inexistente (por ejemplo, el caso de manipulación del lote). Con Pydantic, el script lo frena con un error de validación; sin Pydantic, suele pasar como si fuera válido.
+
+> Pydantic **no compensa** fallas de los criterios de "Logrado": si las intenciones no coinciden con la Matriz E1, el criterio 1 sigue sin superar "En desarrollo" aunque haya un modelo Pydantic.
 
 ---
 

@@ -18,8 +18,8 @@ git log --oneline   # verificar historial incremental
 
 | Resultado | Acción |
 |---|---|
-| API key en algún commit | **−15**. Avisar para rotar. |
-| Un único commit para toda la entrega | **−5**. Anotar. |
+| API key en algún commit | **−1.5**. Avisar para rotar. |
+| Un único commit para toda la entrega | **−0.5**. Anotar. |
 
 ---
 
@@ -135,4 +135,4 @@ Priorizar en el feedback:
 | El corpus tiene 10 documentos con `descripcion_semantica: "texto de ejemplo"` | Copiaron la estructura pero no la llenaron con datos reales. El RAG va a recuperar ruido. |
 | Los docstrings de las herramientas son de una línea genérica | El agente va a elegir las herramientas mal o no elegirlas. Mostrar un ejemplo de docstring bueno. |
 | No hay condición de riesgo en el agente | El sistema tiene autonomía total — es el error de diseño más importante de la E3. Marcar como "En desarrollo" el criterio 6. |
-| Un único commit para toda la entrega | −5. Señalar que el historial es parte de la evaluación del proceso. |
+| Un único commit para toda la entrega | −0.5. Señalar que el historial es parte de la evaluación del proceso. |
