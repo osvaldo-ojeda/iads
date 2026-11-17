@@ -2,7 +2,7 @@
 
 *Informe modelo de la cátedra (nivel "Destacado"). Caso guía: Ortelana Textil — subsistema de onboarding de distribuidores.*
 
-> Este informe continúa el de la [Entrega 1](../../clase_2/ortelana_entrega_1_informe.md). Construye los **pasos 2, 4 y 5 del user journey**: el LLM extrae los datos del mensaje, el código valida que la extracción cumpla el contrato y una regla verifica el dígito verificador del CUIT (que ya habíamos armado en la práctica de la Clase 2). El resto de las reglas de negocio (pasos 6 a 8) se construye en la Entrega 3.
+> Este informe continúa el de la [Entrega 1](ortelana_entrega_1_informe.md). Construye los **pasos 2, 4 y 5 del user journey**: el LLM extrae los datos del mensaje, el código valida que la extracción cumpla el contrato y una regla verifica el dígito verificador del CUIT (que ya habíamos armado en la práctica de la Clase 2). El resto de las reglas de negocio (pasos 6 a 8) se construye en la Entrega 3.
 >
 > **Archivos del prototipo** (ver el [README](../README.md) para la estructura completa): [app.py](../app.py) (punto de entrada), [ortelana/](../ortelana/) (el componente, un módulo por responsabilidad), [prompts/extraccion_v1.txt](../prompts/extraccion_v1.txt) (prompt versionado), [datos/lote_prueba.json](../datos/lote_prueba.json) (los 4 casos), [tests/](../tests/) (pruebas sin API), [.env.example](../.env.example) (variables sin valores). En el repositorio de cada grupo, la tabla del lote va en un archivo aparte (`entrega_2/resultados_lote.md`); acá está todo junto para leerlo de corrido.
 
