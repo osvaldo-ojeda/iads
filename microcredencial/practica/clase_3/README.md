@@ -2,7 +2,7 @@
 
 Componente de extracción del **onboarding de distribuidores** de Ortelana Textil: recibe el mensaje de un distribuidor en texto libre y devuelve sus datos estructurados y validados.
 
-Construye los **pasos 2, 4 y 5 del user journey** diseñado en la [Entrega 1](../clase_2/ortelana_entrega_1_informe.md):
+Construye los **pasos 2, 4 y 5 del user journey** diseñado en la [Entrega 1](docs/ortelana_entrega_1_informe.md):
 
 ```
 Mensaje → [LLM + prompt v1] → json.loads() → Pydantic → regla CUIT → extracción validada
@@ -53,7 +53,8 @@ clase_3/
 ├── tests/
 │   └── test_contrato.py   ← 16 pruebas del contrato y las reglas, sin API
 │
-└── docs/
+└── docs/                              ← los informes del TP, acumulados hasta esta clase
+    ├── ortelana_entrega_1_informe.md  ← Entrega 1 (Clase 2), copia de referencia
     └── ortelana_entrega_2_informe.md  ← informe modelo de la Entrega 2 (nivel "Destacado")
 ```
 

@@ -1,0 +1,8 @@
+pydantic>=2.0
+python-dotenv>=1.0
+certifi          # opcional: evita errores de certificados SSL en macOS
+pytest>=8.0      # solo para correr las pruebas (tests/)
+
+# Opcional: solo para `python app.py lcel` (el paso 2 como cadena de LangChain)
+langchain-core>=0.3
+# langchain-google-genai   # para que la cadena LCEL use Gemini real (si no, usa un modelo falso)
