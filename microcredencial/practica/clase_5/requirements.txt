@@ -1,0 +1,13 @@
+pydantic>=2.0
+python-dotenv>=1.0
+certifi          # opcional: evita errores de certificados SSL en macOS
+pytest>=8.0      # solo para correr las pruebas (tests/)
+
+# RAG (Clase 5): LangChain + base vectorial + embeddings en la compu (sin API key)
+langchain-core>=0.3
+langchain-chroma>=0.2     # instala también chromadb
+fastembed>=0.5            # embeddings locales; la primera vez baja el modelo (~640 MB)
+
+# LLM real en la cadena RAG (solo si hay API key en .env)
+langchain-google-genai>=2.0
+# langchain-openai        # si usás OpenAI o Groq en vez de Gemini

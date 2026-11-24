@@ -24,7 +24,7 @@
 
 ### Dónde estamos (la hoja de ruta)
 
-- **Clase 1:** el problema. Elegimos un dolor real (el onboarding de distribuidores de Ortelana) y vimos que una aplicación inteligente tiene seis piezas: usuario, datos, modelo, herramientas, reglas y salida. Todavía sin código.
+- **Clase 1:** el problema. Elegimos un dolor real (el onboarding de distribuidores de Ortelana) y definimos las 6 piezas de una aplicación inteligente: usuario, datos, modelo, herramientas, reglas y salida. Todavía sin código.
 - **Clase 2:** el diseño. El journey de 11 pasos, el alcance del MVP y la decisión central de la cursada: qué hace el LLM y qué hace una regla. *El LLM interpreta, el código decide.*
 - **Clase 3:** una llamada suelta. El LLM extrae, el código valida y ahí termina.
 - **➜ Clase 4 (hoy):** esa llamada pasa a ser **un paso** de una secuencia, con reglas, una herramienta, puntos de control y una persona que aprueba.

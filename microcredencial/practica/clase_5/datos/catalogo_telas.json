@@ -1,0 +1,74 @@
+[
+  {
+    "id": "TELA-001",
+    "titulo": "Denim pesado 12 oz",
+    "descripcion_semantica": "Denim pesado de 12 oz, 100% algodón rígido con teñido índigo intenso. Tacto rústico y alta resistencia al roce y al desgaste. Ideal para camperas, pantalones y ropa de trabajo.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "central_buenos_aires", "en_stock": true, "tags_regionales": "jean, vaquero, mezclilla"}
+  },
+  {
+    "id": "TELA-002",
+    "titulo": "Denim stretch liviano",
+    "descripcion_semantica": "Denim liviano de 8 oz con 2% de elastano. Elástico y cómodo, se adapta al cuerpo. Para jeans chupín, polleras y prendas ajustadas de uso diario.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "cordoba", "en_stock": true, "tags_regionales": "jean elastizado, chupín"}
+  },
+  {
+    "id": "TELA-003",
+    "titulo": "Lino natural",
+    "descripcion_semantica": "Lino natural 100%, liviano y muy transpirable. Deja pasar el aire y absorbe la humedad, ideal para climas cálidos. Textura apenas rugosa. Para camisas, vestidos y pantalones de verano.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "rosario", "en_stock": true, "tags_regionales": "hilo, linen"}
+  },
+  {
+    "id": "TELA-004",
+    "titulo": "Voile de algodón",
+    "descripcion_semantica": "Voile de algodón, tejido muy delgado, semitransparente y liviano, con caída suave. Ventilado y agradable en días de calor. Para blusas, vestidos de verano y cortinas livianas.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "central_buenos_aires", "en_stock": true, "tags_regionales": "gasa de algodón, batista"}
+  },
+  {
+    "id": "TELA-005",
+    "titulo": "Seda natural satinada",
+    "descripcion_semantica": "Seda natural satinada, brillo suave y caída fluida, muy delicada. Para alta costura, vestidos de fiesta, pañuelos y lencería fina. Requiere lavado a mano.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "cordoba", "en_stock": false, "tags_regionales": "raso, charmeuse"}
+  },
+  {
+    "id": "TELA-006",
+    "titulo": "Paño de lana",
+    "descripcion_semantica": "Paño de lana grueso y abrigado, de tejido denso que retiene el calor. Para tapados, camperas y sacos de invierno.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "central_buenos_aires", "en_stock": false, "tags_regionales": "paño, lana merino"}
+  },
+  {
+    "id": "TELA-007",
+    "titulo": "Polar 300",
+    "descripcion_semantica": "Polar de 300 gramos, suave, grueso y muy abrigado. Liviano para su volumen y de secado rápido. Para buzos, camperas de invierno, ropa de montaña y mantas.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "cordoba", "en_stock": true, "tags_regionales": "polar fleece, micropolar"}
+  },
+  {
+    "id": "TELA-008",
+    "titulo": "Corderito",
+    "descripcion_semantica": "Corderito sintético de pelo largo, imita la piel de oveja. Muy abrigado y suave al tacto. Para forros de camperas, capuchas y prendas de invierno.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "rosario", "en_stock": true, "tags_regionales": "sherpa, piel sintética"}
+  },
+  {
+    "id": "TELA-009",
+    "titulo": "Lona industrial",
+    "descripcion_semantica": "Lona industrial de algodón y poliéster, impermeable y muy resistente al desgarro. Para toldos, carpas, bolsos, mochilas y cobertores.",
+    "metadatos": {"linea_textil": "industrial", "sucursal_disponible": "central_buenos_aires", "en_stock": true, "tags_regionales": "loneta, cordura"}
+  },
+  {
+    "id": "TELA-010",
+    "titulo": "Gabardina de algodón",
+    "descripcion_semantica": "Gabardina de algodón con tejido sarga, firme y durable, que no se arruga con facilidad. Para uniformes, ropa de trabajo, pantalones y guardapolvos.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "cordoba", "en_stock": true, "tags_regionales": "drill, sarga"}
+  },
+  {
+    "id": "TELA-011",
+    "titulo": "Jersey de algodón",
+    "descripcion_semantica": "Jersey de algodón peinado, tejido de punto suave y elástico. Para remeras, musculosas, ropa interior y ropa de bebé.",
+    "metadatos": {"linea_textil": "indumentaria", "sucursal_disponible": "rosario", "en_stock": true, "tags_regionales": "morley, punto"}
+  },
+  {
+    "id": "TELA-012",
+    "titulo": "Chenille para tapicería",
+    "descripcion_semantica": "Chenille de tapicería, tela gruesa y aterciopelada, resistente al uso diario. Para tapizar sillones, sofás, sillas y respaldos de cama.",
+    "metadatos": {"linea_textil": "hogar", "sucursal_disponible": "central_buenos_aires", "en_stock": true, "tags_regionales": "chenil, tapizado"}
+  }
+]

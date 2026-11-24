@@ -1,0 +1,74 @@
+[
+  {
+    "id": "NOR-CAT-C",
+    "titulo": "Categoría C",
+    "descripcion_semantica": "Categoría C de distribuidor. Corresponde a quienes declaran una facturación anual de hasta $80.000.000 (80 millones de pesos por año). Es la categoría de los talleres y comercios más chicos. Operan únicamente con pago contado: transferencia o depósito antes del despacho de la mercadería. No tienen cuenta corriente, ni plazo para pagar, ni crédito.",
+    "metadatos": {"codigo": "NOR-CAT-C", "seccion": "categorias", "aplica_a": "C", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-CAT-B",
+    "titulo": "Categoría B",
+    "descripcion_semantica": "Categoría B de distribuidor. Corresponde a una facturación anual declarada mayor a $80.000.000 y de hasta $300.000.000 (entre 80 y 300 millones de pesos por año). Accede a cuenta corriente: puede pagar a plazo, con un máximo de 30 días desde la fecha de factura. Límite de crédito: hasta $5.000.000 de saldo abierto.",
+    "metadatos": {"codigo": "NOR-CAT-B", "seccion": "categorias", "aplica_a": "B", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-CAT-A",
+    "titulo": "Categoría A",
+    "descripcion_semantica": "Categoría A de distribuidor, la más alta. Requiere dos condiciones: facturación anual declarada mayor a $300.000.000 (más de 300 millones de pesos por año) y al menos 12 meses de antigüedad como cliente de Ortelana. Accede a cuenta corriente con plazo de hasta 60 días desde la fecha de factura y un límite de crédito de hasta $15.000.000 de saldo abierto.",
+    "metadatos": {"codigo": "NOR-CAT-A", "seccion": "categorias", "aplica_a": "A", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-DOC",
+    "titulo": "Documentación obligatoria",
+    "descripcion_semantica": "Documentación obligatoria para pedir cuenta corriente (categorías A y B). Hay que presentar tres papeles: la constancia de inscripción en ARCA (ex AFIP) con CUIT válido, la habilitación municipal vigente y la constancia de inscripción en Ingresos Brutos. Si falta cualquiera de esos documentos, la solicitud queda pendiente hasta que se complete: no se rechaza. Para operar al contado no se exige esta documentación.",
+    "metadatos": {"codigo": "NOR-DOC", "seccion": "requisitos", "aplica_a": "A,B", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-NUEVO",
+    "titulo": "Distribuidores nuevos",
+    "descripcion_semantica": "Distribuidores nuevos: clientes que recién empiezan, que le compran a Ortelana por primera vez y no tienen historial de compras. Aunque facturen mucho, no entran en la mejor categoría: ingresan siempre en categoría C o B según su facturación, nunca directamente en categoría A, aunque facturen más de 300 millones. Pueden pedir el pase a categoría A cuando cumplan 12 meses de antigüedad como clientes.",
+    "metadatos": {"codigo": "NOR-NUEVO", "seccion": "requisitos", "aplica_a": "todas", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-DEUDA",
+    "titulo": "Deuda vencida",
+    "descripcion_semantica": "Deuda vencida o atrasos en los pagos. Si un distribuidor tiene un saldo vencido (deuda impaga, facturas sin pagar) de más de 30 días, su cuenta corriente queda suspendida: no se le vende a plazo y opera solo al contado hasta que regularice la deuda.",
+    "metadatos": {"codigo": "NOR-DEUDA", "seccion": "requisitos", "aplica_a": "todas", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-ZONA",
+    "titulo": "Cobertura geográfica y flete",
+    "descripcion_semantica": "Cobertura geográfica y costo del flete. Ortelana vende a distribuidores de todo el país, sin cupos ni restricciones por zona o provincia. El flete (envío, transporte o despacho de la mercadería) está a cargo de Ortelana solo en AMBA (Ciudad de Buenos Aires y conurbano) y en Rosario. En el resto del país, por ejemplo Córdoba, Mendoza, Tucumán o la Patagonia, el flete lo paga el distribuidor.",
+    "metadatos": {"codigo": "NOR-ZONA", "seccion": "logistica", "aplica_a": "todas", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-APROB",
+    "titulo": "Aprobación de cuenta corriente",
+    "descripcion_semantica": "Quién aprueba las solicitudes. Toda alta de cuenta corriente o cambio de categoría la aprueba el Jefe de Administración de Ortelana. Ningún empleado ni sistema automático puede aprobar una cuenta corriente por su cuenta: el sistema solo arma el legajo y recomienda.",
+    "metadatos": {"codigo": "NOR-APROB", "seccion": "aprobacion", "aplica_a": "A,B", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-01",
+    "titulo": "Cuotas sin interés para categoría A",
+    "descripcion_semantica": "Financiación y cuotas sin interés. Los distribuidores de categoría A que no tienen deuda acceden a financiación en 3 cuotas sin interés para órdenes de compra mayores a $500.000. Las demás categorías no tienen cuotas sin interés.",
+    "metadatos": {"codigo": "NOR-01", "seccion": "beneficios", "aplica_a": "A", "vigente": true, "version": "3.2"}
+  },
+  {
+    "id": "NOR-ZONA-v3.1",
+    "titulo": "Cobertura geográfica y flete (versión anterior)",
+    "descripcion_semantica": "Cobertura geográfica y costo del flete, versión 3.1 (derogada desde el 01/03/2026). El flete (envío o transporte de la mercadería) estaba a cargo de Ortelana en AMBA, Rosario y Córdoba. En el resto del país lo pagaba el distribuidor.",
+    "metadatos": {"codigo": "NOR-ZONA", "seccion": "logistica", "aplica_a": "todas", "vigente": false, "version": "3.1"}
+  },
+  {
+    "id": "NOR-01-v3.0",
+    "titulo": "Cuotas sin interés (versión anterior)",
+    "descripcion_semantica": "Financiación y cuotas sin interés, versión 3.0 (derogada). Los distribuidores de categorías A y B accedían a 6 cuotas sin interés para órdenes de compra mayores a $300.000.",
+    "metadatos": {"codigo": "NOR-01", "seccion": "beneficios", "aplica_a": "A,B", "vigente": false, "version": "3.0"}
+  },
+  {
+    "id": "NOR-CAT-B-v3.1",
+    "titulo": "Categoría B (versión anterior)",
+    "descripcion_semantica": "Categoría B de distribuidor, versión 3.1 (derogada desde el 01/03/2026). Cuenta corriente con plazo máximo de 45 días desde la fecha de factura y límite de crédito de hasta $3.000.000 de saldo abierto.",
+    "metadatos": {"codigo": "NOR-CAT-B", "seccion": "categorias", "aplica_a": "B", "vigente": false, "version": "3.1"}
+  }
+]

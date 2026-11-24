@@ -1,0 +1,22 @@
+[
+  {
+    "pregunta": "¿El flete a Córdoba lo pagan ustedes?",
+    "simulacion_sin_rag": "¡Sí! En Ortelana el envío es sin cargo a todo el país para compras mayores a $150.000. Para Córdoba el despacho sale en 48 a 72 horas hábiles.",
+    "que_mirar": "Sin contexto, el modelo inventa un beneficio que no existe. La regla vigente (NOR-ZONA) dice que en Córdoba el flete lo paga el distribuidor."
+  },
+  {
+    "pregunta": "¿Tienen cuotas sin interés?",
+    "simulacion_sin_rag": "Sí, ofrecemos hasta 6 cuotas sin interés con todas las tarjetas bancarias, para cualquier categoría de distribuidor.",
+    "que_mirar": "La respuesta inventada coincide con la versión DEROGADA (NOR-01 v3.0). La vigente: 3 cuotas, solo categoría A sin deuda y órdenes de más de $500.000."
+  },
+  {
+    "pregunta": "¿Qué papeles tengo que mandar para tener cuenta corriente?",
+    "simulacion_sin_rag": "Necesitás tu DNI, la constancia de CUIT, los últimos tres balances certificados por un contador y una referencia bancaria.",
+    "que_mirar": "Suena razonable, pero no es lo que pide Ortelana. NOR-DOC pide constancia de ARCA, habilitación municipal e Ingresos Brutos."
+  },
+  {
+    "pregunta": "¿Aceptan pagos con criptomonedas?",
+    "simulacion_sin_rag": "Sí, aceptamos USDT y Bitcoin a través de una billetera virtual. Consultá con tu ejecutivo de cuenta los datos para transferir.",
+    "que_mirar": "La normativa no habla del tema. Sin RAG el modelo inventa; con RAG ningún fragmento supera el umbral y responde 'No tengo información oficial'. Es el caso 'Destacado' de la consigna."
+  }
+]
